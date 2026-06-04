@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In — SkoroBoard by Skorosys</title>
+  <link rel="icon" type="image/png" href="images/favicon-32.png" />
+  <link rel="apple-touch-icon" href="images/favicon-192.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0b2a3b;
+      color: #fff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Animated background ─────────────────────────────────────── */
+    .bg {
+      position: fixed; inset: 0; z-index: 0;
+      background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(62,207,203,0.07) 0%, transparent 70%),
+                  radial-gradient(ellipse 60% 80% at 20% 80%, rgba(76,175,114,0.05) 0%, transparent 60%),
+                  #0b2a3b;
+    }
+    .bg-grid {
+      position: fixed; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(rgba(62,207,203,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(62,207,203,0.06) 1px, transparent 1px);
+      background-size: 48px 48px;
+      animation: gridDrift 20s linear infinite;
+    }
+    @keyframes gridDrift {
+      from { background-position: 0 0; }
+      to   { background-position: 48px 48px; }
+    }
+    .orb {
+      position: fixed; border-radius: 50%; filter: blur(80px); z-index: 0; pointer-events: none;
+    }
+    .orb-1 { width: 500px; height: 500px; background: rgba(62,207,203,0.08); top: -120px; right: -100px; animation: float1 12s ease-in-out infinite; }
+    .orb-2 { width: 400px; height: 400px; background: rgba(76,175,114,0.07); bottom: -100px; left: -80px; animation: float2 16s ease-in-out infinite; }
+    @keyframes float1 {
+      0%,100% { transform: translate(0,0); }
+      50%      { transform: translate(-30px, 40px); }
+    }
+    @keyframes float2 {
+      0%,100% { transform: translate(0,0); }
+      50%      { transform: translate(40px,-30px); }
+    }
+
+    /* ── Layout ──────────────────────────────────────────────────── */
+    .layout {
+      position: relative; z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 480px;
+      min-height: 100vh;
+    }
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; }
+      .panel-left { display: none; }
+    }
+
+    /* ── Left panel — branding preview ──────────────────────────── */
+    .panel-left {
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: flex-start;
+      padding: 60px 64px;
+      border-right: 1px solid rgba(62,207,203,0.1);
+    }
+    .brand-logo {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 48px;
+    }
+    .brand-logo img { width: 44px; height: 44px; object-fit: contain; }
+    .brand-logo-text {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.4rem; font-weight: 700;
+    }
+    .brand-logo-text span { color: #3ecfcb; }
+    .panel-tagline {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-weight: 800; line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .panel-tagline .grad {
+      background: linear-gradient(135deg, #3ecfcb, #4caf72);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .panel-sub {
+      color: #8db4c8; font-size: 1rem; line-height: 1.7;
+      max-width: 420px; margin-bottom: 48px;
+    }
+
+    /* Dashboard card preview */
+    .preview-card {
+      background: rgba(19,46,64,0.85);
+      border: 1px solid rgba(62,207,203,0.15);
+      border-radius: 16px;
+      padding: 20px 24px;
+      width: 100%; max-width: 460px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.4);
+    }
+    .preview-topbar {
+      display: flex; align-items: center; gap: 8px; margin-bottom: 18px;
+    }
+    .preview-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .preview-dot.r { background: #ff5f57; }
+    .preview-dot.y { background: #ffbd2e; }
+    .preview-dot.g { background: #28ca41; }
+    .preview-url {
+      flex: 1; background: rgba(255,255,255,0.05);
+      border-radius: 6px; padding: 4px 10px;
+      font-size: 0.72rem; color: #5a7d92; text-align: center;
+    }
+    .preview-metrics {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px;
+    }
+    .metric {
+      background: rgba(11,42,59,0.7); border-radius: 10px;
+      padding: 12px 14px; border: 1px solid rgba(62,207,203,0.1);
+    }
+    .metric-label { font-size: 0.65rem; color: #5a7d92; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+    .metric-val { font-size: 1.3rem; font-weight: 700; font-family: 'Poppins', sans-serif; }
+    .metric-val.cyan { color: #3ecfcb; }
+    .metric-val.green { color: #4caf72; }
+    .metric-val.yellow { color: #ffc107; }
+    .metric-trend { font-size: 0.68rem; margin-top: 4px; }
+    .preview-assets { display: flex; flex-direction: column; gap: 8px; }
+    .asset-row {
+      display: flex; align-items: center; gap: 10px;
+      background: rgba(11,42,59,0.5); border-radius: 8px; padding: 10px 12px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .asset-icon { font-size: 1rem; width: 28px; text-align: center; }
+    .asset-name { flex: 1; font-size: 0.82rem; font-weight: 500; }
+    .asset-status {
+      font-size: 0.68rem; font-weight: 600; padding: 3px 8px; border-radius: 20px;
+    }
+    .s-ok  { background: rgba(76,175,114,0.18); color: #4caf72; }
+    .s-warn{ background: rgba(255,193,7,0.18);  color: #ffc107; }
+    .s-err { background: rgba(239,68,68,0.18);  color: #f87171; }
+    .pulse-dot {
+      width: 6px; height: 6px; border-radius: 50%; background: #4caf72;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%,100% { opacity: 1; transform: scale(1); }
+      50%      { opacity: 0.5; transform: scale(1.5); }
+    }
+    .preview-footer {
+      margin-top: 14px; font-size: 0.65rem; color: #5a7d92;
+      display: flex; align-items: center; gap: 6px;
+    }
+
+    /* ── Right panel — login form ────────────────────────────────── */
+    .panel-right {
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      padding: 48px 40px;
+      background: rgba(11,42,59,0.4);
+      backdrop-filter: blur(20px);
+    }
+    .form-card {
+      width: 100%; max-width: 380px;
+    }
+    .form-logo {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 32px; justify-content: center;
+    }
+    .form-logo img { width: 38px; height: 38px; object-fit: contain; }
+    .form-logo-text {
+      font-family: 'Poppins', sans-serif; font-size: 1.25rem; font-weight: 700;
+    }
+    .form-logo-text span { color: #3ecfcb; }
+
+    .form-heading {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.65rem; font-weight: 700;
+      text-align: center; margin-bottom: 6px;
+    }
+    .form-sub {
+      text-align: center; color: #8db4c8;
+      font-size: 0.88rem; margin-bottom: 32px;
+    }
+
+    /* SSO buttons */
+    .sso-group { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+    .sso-btn {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      width: 100%; padding: 12px 20px;
+      border-radius: 10px; font-size: 0.9rem; font-weight: 500;
+      cursor: pointer; border: none; transition: all 0.22s ease;
+      font-family: 'Inter', sans-serif;
+    }
+    .sso-btn:hover { transform: translateY(-2px); }
+    .sso-btn svg { flex-shrink: 0; }
+    .sso-google {
+      background: #fff; color: #3c4043;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    }
+    .sso-google:hover { background: #f8f8f8; box-shadow: 0 6px 20px rgba(0,0,0,0.35); }
+    .sso-microsoft {
+      background: #2a2f4a; color: #fff;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .sso-microsoft:hover { background: #323757; box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
+
+    /* Divider */
+    .divider {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 24px; color: #5a7d92; font-size: 0.8rem;
+    }
+    .divider::before, .divider::after {
+      content: ''; flex: 1; height: 1px; background: rgba(62,207,203,0.15);
+    }
+
+    /* Inputs */
+    .field { margin-bottom: 16px; }
+    .field label {
+      display: block; font-size: 0.82rem; font-weight: 500;
+      color: #8db4c8; margin-bottom: 7px;
+    }
+    .field input {
+      width: 100%; padding: 12px 14px;
+      background: rgba(11,42,59,0.8);
+      border: 1.5px solid rgba(62,207,203,0.2);
+      border-radius: 10px; color: #fff;
+      font-size: 0.9rem; font-family: 'Inter', sans-serif;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+    .field input::placeholder { color: #5a7d92; }
+    .field input:focus {
+      border-color: #3ecfcb;
+      box-shadow: 0 0 0 3px rgba(62,207,203,0.12);
+    }
+    .field-row {
+      display: flex; justify-content: space-between; align-items: center; margin-bottom: 7px;
+    }
+    .field-row label { margin-bottom: 0; }
+    .forgot { font-size: 0.78rem; color: #3ecfcb; cursor: pointer; }
+    .forgot:hover { text-decoration: underline; }
+
+    /* Submit */
+    .btn-submit {
+      width: 100%; padding: 13px;
+      background: linear-gradient(135deg, #3ecfcb, #31b8b4);
+      color: #0b2a3b; font-weight: 700; font-size: 0.95rem;
+      border: none; border-radius: 10px; cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 20px rgba(62,207,203,0.3);
+      margin-top: 6px;
+    }
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(62,207,203,0.45);
+      background: linear-gradient(135deg, #56dbd7, #3ecfcb);
+    }
+
+    /* Footer text */
+    .form-footer {
+      text-align: center; margin-top: 24px;
+      font-size: 0.8rem; color: #5a7d92; line-height: 1.6;
+    }
+    .form-footer a { color: #3ecfcb; }
+    .form-footer a:hover { text-decoration: underline; }
+
+    .powered {
+      text-align: center; margin-top: 32px;
+      font-size: 0.72rem; color: #3a5f74;
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+    }
+    .powered img { width: 16px; height: 16px; object-fit: contain; opacity: 0.5; }
+
+    /* ── Entry animation ─────────────────────────────────────────── */
+    .form-card { animation: fadeUp 0.5s ease both; }
+    .preview-card { animation: fadeUp 0.6s 0.1s ease both; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg"></div>
+  <div class="bg-grid"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <div class="layout">
+
+    <!-- ── Left: Branding + Live Preview ─────────────────── -->
+    <div class="panel-left">
+      <div class="brand-logo">
+        <img src="images/logo-icon.png" alt="Skorosys logo" />
+        <span class="brand-logo-text">Skoro<span>sys</span>.ai</span>
+      </div>
+
+      <h1 class="panel-tagline">
+        Monitor Every Asset.<br/>
+        <span class="grad">Before It Fails.</span>
+      </h1>
+      <p class="panel-sub">
+        SkoroBoard gives your operations team real-time AI-powered visibility into every machine — from edge sensors to cloud dashboards, in one unified interface.
+      </p>
+
+      <!-- Live dashboard preview mockup -->
+      <div class="preview-card">
+        <div class="preview-topbar">
+          <div class="preview-dot r"></div>
+          <div class="preview-dot y"></div>
+          <div class="preview-dot g"></div>
+          <div class="preview-url">app.skorosys.ai / dashboard</div>
+          <div class="pulse-dot"></div>
+        </div>
+
+        <div class="preview-metrics">
+          <div class="metric">
+            <div class="metric-label">Assets Online</div>
+            <div class="metric-val cyan">24</div>
+            <div class="metric-trend" style="color:#4caf72;">↑ 2 added today</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Alerts</div>
+            <div class="metric-val yellow">3</div>
+            <div class="metric-trend" style="color:#ffc107;">⚠ Action needed</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Uptime</div>
+            <div class="metric-val green">98.7%</div>
+            <div class="metric-trend" style="color:#4caf72;">↑ Last 30 days</div>
+          </div>
+        </div>
+
+        <div class="preview-assets">
+          <div class="asset-row">
+            <div class="asset-icon">⚙️</div>
+            <div class="asset-name">Pump #1 — Line A</div>
+            <div class="asset-status s-ok">Normal</div>
+          </div>
+          <div class="asset-row">
+            <div class="asset-icon">🌀</div>
+            <div class="asset-name">Fan Motor #3</div>
+            <div class="asset-status s-warn">Vibration ↑</div>
+          </div>
+          <div class="asset-row">
+            <div class="asset-icon">🔧</div>
+            <div class="asset-name">Compressor #2</div>
+            <div class="asset-status s-err">Temp Critical</div>
+          </div>
+        </div>
+
+        <div class="preview-footer">
+          <div class="pulse-dot"></div>
+          Live · Last sync 12 seconds ago · 6 edge nodes connected
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Right: Login Form ──────────────────────────────── -->
+    <div class="panel-right">
+      <div class="form-card">
+
+        <div class="form-logo">
+          <img src="images/logo-icon.png" alt="Skorosys" />
+          <span class="form-logo-text">Skoro<span>Board</span></span>
+        </div>
+
+        <h2 class="form-heading">Welcome back</h2>
+        <p class="form-sub">Sign in to your SkoroBoard account</p>
+
+        <!-- SSO Buttons -->
+        <div class="sso-group">
+          <button class="sso-btn sso-google" type="button">
+            <svg viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+            Continue with Google
+          </button>
+
+          <button class="sso-btn sso-microsoft" type="button">
+            <svg viewBox="0 0 21 21" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1"  y="1"  width="9" height="9" fill="#f25022"/>
+              <rect x="11" y="1"  width="9" height="9" fill="#7fba00"/>
+              <rect x="1"  y="11" width="9" height="9" fill="#00a4ef"/>
+              <rect x="11" y="11" width="9" height="9" fill="#ffb900"/>
+            </svg>
+            Continue with Microsoft
+          </button>
+        </div>
+
+        <div class="divider">or sign in with email</div>
+
+        <!-- Email / Password -->
+        <form onsubmit="return false;">
+          <div class="field">
+            <label for="email">Work Email</label>
+            <input type="email" id="email" placeholder="you@company.com" autocomplete="email" />
+          </div>
+
+          <div class="field">
+            <div class="field-row">
+              <label for="password">Password</label>
+              <a class="forgot" tabindex="0">Forgot password?</a>
+            </div>
+            <input type="password" id="password" placeholder="••••••••" autocomplete="current-password" />
+          </div>
+
+          <button class="btn-submit" type="submit">Sign In to SkoroBoard</button>
+        </form>
+
+        <div class="form-footer">
+          Don't have access? <a href="index.html#contact">Contact your admin</a> or
+          <a href="index.html#contact">request a demo</a>.
+        </div>
+
+        <div class="powered">
+          <img src="images/logo-icon.png" alt="" />
+          Powered by Skorosys.ai
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
