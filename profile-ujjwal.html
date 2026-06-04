@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ujjwal Chebbi — Profile & CV | Skorosys.ai</title>
+  <meta name="description" content="Ujjwal Chebbi — Co-Founder & CEO of Skorosys.ai. Industrial automation leader, IIoT strategist, and MBA holder with 10+ years building smart factory solutions." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .timeline { position: relative; padding-left: 28px; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 6px; top: 8px; bottom: 8px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--accent-cyan), var(--accent-green));
+    }
+    .timeline-item { position: relative; margin-bottom: 32px; }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -25px; top: 10px;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--accent-cyan);
+      border: 2px solid var(--bg-primary);
+      box-shadow: 0 0 8px rgba(62,207,203,0.5);
+    }
+    .timeline-item:last-child::before { background: var(--accent-green); box-shadow: 0 0 8px rgba(76,175,114,0.5); }
+    .award-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 12px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    .award-card:hover { border-color: var(--border); }
+    .award-icon { font-size: 1.6rem; flex-shrink: 0; }
+    .upload-zone {
+      border: 2px dashed var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .upload-zone:hover { border-color: var(--accent-cyan); background: rgba(62,207,203,0.04); }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="18" cy="18" r="17" stroke="rgba(62,207,203,0.2)" stroke-width="1"/>
+          <path d="M18 5 A13 13 0 0 1 31 18" stroke="#3ecfcb" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          <path d="M18 31 A13 13 0 0 1 5 18"  stroke="#4caf72" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          <circle cx="18" cy="5"  r="2" fill="#3ecfcb"/>
+          <circle cx="18" cy="31" r="2" fill="#4caf72"/>
+        </svg>
+        <span class="nav-logo-text">Skoro<span>sys</span>.ai</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="about.html" class="btn btn-outline" style="padding:9px 20px;font-size:0.85rem;">← Back to About</a>
+      </div>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div style="height:var(--nav-height);"></div>
+  <div style="background:linear-gradient(180deg,var(--bg-secondary) 0%,var(--bg-primary) 100%);padding:40px 0 0;border-bottom:1px solid var(--border-card);">
+    <div class="container">
+      <a href="about.html" style="color:var(--text-muted);font-size:0.85rem;display:inline-flex;align-items:center;gap:6px;margin-bottom:32px;transition:color 0.2s;" onmouseover="this.style.color='var(--accent-cyan)'" onmouseout="this.style.color='var(--text-muted)'">
+        ← About
+      </a>
+    </div>
+  </div>
+
+  <!-- PROFILE CONTENT -->
+  <section class="section--sm" style="padding-top:48px;">
+    <div class="container">
+      <div class="profile-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="profile-sidebar">
+          <div class="card" style="padding:32px;text-align:center;">
+            <div class="team-photo" style="width:160px;height:160px;margin:0 auto 20px;font-size:4rem;">
+              <img src="images/ujjwal-chebbi.jpg" alt="Ujjwal Chebbi" onerror="this.style.display='none';this.parentElement.innerHTML='👤';" />
+            </div>
+            <div class="name">Ujjwal Chebbi</div>
+            <div class="title">Co-Founder &amp; CEO, Skorosys.ai</div>
+
+            <div class="profile-contact" style="margin-top:20px;text-align:left;">
+              <a href="mailto:ujjwal@skorosys.com">
+                <span class="icon">✉</span> ujjwal@skorosys.com
+              </a>
+              <a href="https://www.linkedin.com/in/ujjwal-chebbi-a4845b94/" target="_blank" rel="noopener">
+                <span class="icon">in</span> linkedin.com/in/ujjwal-chebbi
+              </a>
+              <a href="https://skorosys.com" target="_blank">
+                <span class="icon">🌐</span> skorosys.com
+              </a>
+              <a href="#">
+                <span class="icon">📍</span> Bengaluru, Karnataka, India
+              </a>
+            </div>
+
+            <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border-card);">
+              <label for="cv-upload" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:10px;font-size:0.85rem;cursor:pointer;" id="cv-label">
+                📄 Upload CV (PDF)
+              </label>
+              <input type="file" id="cv-upload" accept=".pdf" style="display:none;" onchange="handleCvUpload(this)" />
+              <a id="cv-download" href="#" class="btn btn-outline" style="width:100%;justify-content:center;font-size:0.85rem;display:none;">
+                ⬇ Download CV
+              </a>
+              <a href="https://www.linkedin.com/in/ujjwal-chebbi-a4845b94/" target="_blank" rel="noopener" class="btn btn-outline" style="width:100%;justify-content:center;font-size:0.85rem;margin-top:10px;">
+                View LinkedIn Profile
+              </a>
+            </div>
+          </div>
+
+          <!-- Skills -->
+          <div class="card" style="padding:28px;margin-top:24px;">
+            <div class="cv-section-title">Core Skills</div>
+            <div style="display:flex;flex-direction:column;gap:14px;">
+              <div class="skill-item">
+                <div class="skill-label"><span>Industrial Automation</span><span style="color:var(--accent-cyan);">95%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="95%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-label"><span>IIoT &amp; Smart Factory</span><span style="color:var(--accent-cyan);">90%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-label"><span>Business Strategy</span><span style="color:var(--accent-cyan);">88%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="88%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-label"><span>Product Management</span><span style="color:var(--accent-cyan);">86%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="86%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-label"><span>Team Leadership</span><span style="color:var(--accent-cyan);">92%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="92%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-label"><span>Data-Driven Decision Making</span><span style="color:var(--accent-cyan);">82%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="82%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools & Tech -->
+          <div class="card" style="padding:28px;margin-top:24px;">
+            <div class="cv-section-title">Tools &amp; Technologies</div>
+            <div class="team-tags" style="justify-content:flex-start;">
+              <span class="tag">IIoT</span>
+              <span class="tag">CNC / Robotics</span>
+              <span class="tag">Smart Factory</span>
+              <span class="tag">Scrum / Agile</span>
+              <span class="tag">SCADA</span>
+              <span class="tag">Python (Data Science)</span>
+              <span class="tag">Taguchi Method</span>
+              <span class="tag">CNC Software</span>
+              <span class="tag">Manufacturing Ops</span>
+              <span class="tag">Stakeholder Management</span>
+              <span class="tag">B2B Sales</span>
+              <span class="tag">Fundraising</span>
+            </div>
+          </div>
+
+          <!-- Languages -->
+          <div class="card" style="padding:28px;margin-top:24px;">
+            <div class="cv-section-title">Languages</div>
+            <div style="display:flex;flex-direction:column;gap:10px;font-size:0.88rem;">
+              <div style="display:flex;justify-content:space-between;"><span>English</span><span style="color:var(--accent-cyan);font-weight:600;">Fluent</span></div>
+              <div style="display:flex;justify-content:space-between;"><span>Kannada</span><span style="color:var(--accent-cyan);font-weight:600;">Native</span></div>
+              <div style="display:flex;justify-content:space-between;"><span>Hindi</span><span style="color:var(--accent-cyan);font-weight:600;">Fluent</span></div>
+              <div style="display:flex;justify-content:space-between;"><span>Marathi</span><span style="color:var(--accent-cyan);font-weight:600;">Conversational</span></div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main>
+
+          <!-- Summary -->
+          <div class="card cv-section reveal" style="padding:32px;margin-bottom:32px;">
+            <div class="cv-section-title">About</div>
+            <p style="font-size:0.97rem;line-height:1.85;color:var(--text-secondary);">
+              Ujjwal Chebbi is the Co-Founder &amp; CEO of Skorosys.ai. A mechanical engineer who evolved into an industrial automation and IIoT product leader, Ujjwal spent over a decade building and shipping software-hardware systems at the intersection of manufacturing and technology. From developing and deploying robotic programs at ANCA CNC Machines — one of the world's leading CNC tool manufacturers — to spearheading smart factory automation initiatives, he has deep first-hand experience with the operational pain of machine downtime and inefficient maintenance workflows. He completed his Executive MBA at Masters' Union (2024–25), graduating with a Chairman's Award for All-Round Performance, Dean's List recognition, and winning the VIP Demo Day for Industrial AI startup strategy — the genesis of Skorosys. At Skorosys he leads business development, customer strategy, investor relations, and go-to-market.
+            </p>
+          </div>
+
+          <!-- Experience -->
+          <div class="cv-section reveal">
+            <div class="cv-section-title">Work Experience</div>
+            <div class="timeline">
+
+              <div class="timeline-item">
+                <div class="card" style="padding:24px;">
+                  <div class="cv-item-header">
+                    <div class="cv-item-title">Co-Founder &amp; CEO</div>
+                    <div class="cv-item-period">2025 – Present</div>
+                  </div>
+                  <div class="cv-item-org">Skorosys Technologies Pvt. Ltd. · Bengaluru, India</div>
+                  <p style="font-size:0.88rem;margin-bottom:12px;">Leading Skorosys's commercial strategy, customer acquisition, investor relations, and go-to-market. Secured pilot engagements with IFFCO and IndianOil. Driving the company toward its ₹7 Cr seed round. Built the business case and market strategy for India's predictive maintenance opportunity — a ₹30,400+ Cr addressable market growing at 34.5% CAGR.</p>
+                  <div class="team-tags" style="justify-content:flex-start;">
+                    <span class="tag">Entrepreneurship</span>
+                    <span class="tag">Fundraising</span>
+                    <span class="tag">B2B Sales</span>
+                    <span class="tag">Go-to-Market</span>
+                    <span class="tag">Product Vision</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="card" style="padding:24px;">
+                  <div class="cv-item-header">
+                    <div class="cv-item-title">Team Leader — Application Software Engineering</div>
+                    <div class="cv-item-period">[ Add dates ]</div>
+                  </div>
+                  <div class="cv-item-org">ANCA CNC Machines · Bengaluru, India</div>
+                  <p style="font-size:0.88rem;margin-bottom:12px;">ANCA is a world-leading manufacturer of CNC tool grinding machines. Led a software engineering team building and deploying application software for CNC machines and robotic automation systems. Spearheaded smart factory automation initiatives, aligning software development with business objectives. As a Certified ScrumMaster, improved sprint efficiency and ensured timely delivery of critical product features. Responsible for managing CNC software deployment and testing, achieving high system reliability.</p>
+                  <div class="team-tags" style="justify-content:flex-start;">
+                    <span class="tag">CNC Software</span>
+                    <span class="tag">Robotics</span>
+                    <span class="tag">Smart Factory</span>
+                    <span class="tag">Scrum Leadership</span>
+                    <span class="tag">Team Management</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="card" style="padding:24px;">
+                  <div class="cv-item-header">
+                    <div class="cv-item-title">Application Software Engineer</div>
+                    <div class="cv-item-period">[ Add dates ]</div>
+                  </div>
+                  <div class="cv-item-org">ANCA CNC Machines · Bengaluru, India</div>
+                  <p style="font-size:0.88rem;margin-bottom:12px;">Developed and deployed robotic programs for CNC machines. Resolved external technical issues, automated software development pipelines, and contributed to design reviews and process optimisation across the engineering team.</p>
+                  <div class="team-tags" style="justify-content:flex-start;">
+                    <span class="tag">CNC Programming</span>
+                    <span class="tag">Robotics</span>
+                    <span class="tag">Software Development</span>
+                    <span class="tag">Process Automation</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="card" style="padding:24px;">
+                  <div class="cv-item-header">
+                    <div class="cv-item-title">Design Engineer</div>
+                    <div class="cv-item-period">[ Add dates ]</div>
+                  </div>
+                  <div class="cv-item-org">Kennametal · Bengaluru, India</div>
+                  <p style="font-size:0.88rem;margin-bottom:12px;">Kennametal is a global leader in tooling and industrial materials. Worked on design engineering and manufacturing optimisation. Conducted research on optimising dry turning parameters of AISI 4140 steel using the Taguchi method — published as a final-year project presented at IIT-Madras and VIT-Vellore (Top 50 nationally, 2nd place at VIT).</p>
+                  <div class="team-tags" style="justify-content:flex-start;">
+                    <span class="tag">Design Engineering</span>
+                    <span class="tag">Taguchi Method</span>
+                    <span class="tag">Manufacturing</span>
+                    <span class="tag">CNC Machining</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="card" style="padding:24px;">
+                  <div class="cv-item-header">
+                    <div class="cv-item-title">Engineering Intern</div>
+                    <div class="cv-item-period">[ Add dates ]</div>
+                  </div>
+                  <div class="cv-item-org">Sohamsaa Systems Pvt. Ltd. &amp; Ace Designers · India</div>
+                  <p style="font-size:0.88rem;margin-bottom:12px;">Early-career exposure to industrial automation, CNC machine design, and manufacturing operations at two Indian industrial engineering firms.</p>
+                  <div class="team-tags" style="justify-content:flex-start;">
+                    <span class="tag">Industrial Automation</span>
+                    <span class="tag">CNC Design</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="cv-section reveal" style="margin-top:40px;">
+            <div class="cv-section-title">Education</div>
+            <div class="timeline">
+
+              <div class="timeline-item">
+                <div class="card" style="padding:24px;">
+                  <div class="cv-item-header">
+                    <div class="cv-item-title">Executive MBA</div>
+                    <div class="cv-item-period">2024 – 2025</div>
+                  </div>
+                  <div class="cv-item-org">Masters' Union · Gurugram, India</div>
+                  <p style="font-size:0.88rem;margin-bottom:12px;">Intensive executive MBA with focus on technology entrepreneurship, strategy, and business leadership. GPA: 3.63/4.0. The programme was instrumental in shaping the Skorosys business model — winning the VIP Demo Day pitch competition for an Industrial AI startup concept that directly became Skorosys.ai.</p>
+                  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px;">
+                    <div style="background:rgba(62,207,203,0.08);border:1px solid rgba(62,207,203,0.2);border-radius:8px;padding:10px;text-align:center;">
+                      <div style="font-size:1rem;margin-bottom:4px;">🏆</div>
+                      <div style="font-size:0.72rem;font-weight:700;color:var(--accent-cyan);">Chairman's Award</div>
+                      <div style="font-size:0.65rem;color:var(--text-muted);">All Round Performance</div>
+                    </div>
+                    <div style="background:rgba(62,207,203,0.08);border:1px solid rgba(62,207,203,0.2);border-radius:8px;padding:10px;text-align:center;">
+                      <div style="font-size:1rem;margin-bottom:4px;">📋</div>
+                      <div style="font-size:0.72rem;font-weight:700;color:var(--accent-cyan);">Dean's List</div>
+                      <div style="font-size:0.65rem;color:var(--text-muted);">Academic Excellence</div>
+                    </div>
+                    <div style="background:rgba(76,175,114,0.08);border:1px solid rgba(76,175,114,0.2);border-radius:8px;padding:10px;text-align:center;">
+                      <div style="font-size:1rem;margin-bottom:4px;">🚀</div>
+                      <div style="font-size:0.72rem;font-weight:700;color:var(--accent-green);">VIP Demo Day</div>
+                      <div style="font-size:0.65rem;color:var(--text-muted);">Industrial AI — Winner</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="card" style="padding:24px;">
+                  <div class="cv-item-header">
+                    <div class="cv-item-title">Bachelor of Engineering — Mechanical Engineering</div>
+                    <div class="cv-item-period">2011 – 2015</div>
+                  </div>
+                  <div class="cv-item-org">Acharya Institute of Technology · Bengaluru, India</div>
+                  <p style="font-size:0.88rem;margin-bottom:12px;">First Class Distinction. Specialised in manufacturing processes, CNC machining, and design engineering. Conducted research on the Taguchi method for optimising CNC turning parameters — presented at IIT-Madras (Top 50 nationally) and VIT-Vellore (2nd place). Best Achiever's Award (2014) for all-round academic and extracurricular performance.</p>
+                  <div class="team-tags" style="justify-content:flex-start;">
+                    <span class="tag">Mechanical Engineering</span>
+                    <span class="tag">First Class Distinction</span>
+                    <span class="tag">Best Achiever 2014</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Certifications -->
+          <div class="cv-section reveal" style="margin-top:40px;">
+            <div class="cv-section-title">Certifications</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+
+              <div class="card" style="padding:22px;display:flex;gap:14px;align-items:flex-start;">
+                <div style="font-size:1.6rem;flex-shrink:0;">🏅</div>
+                <div>
+                  <div style="font-weight:700;font-size:0.92rem;margin-bottom:4px;">Certified ScrumMaster® (CSM®)</div>
+                  <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:6px;">Scrum Alliance · Mar 2021</div>
+                  <p style="font-size:0.82rem;">Agile team leadership, sprint planning, and product delivery management for engineering teams.</p>
+                </div>
+              </div>
+
+              <div class="card" style="padding:22px;display:flex;gap:14px;align-items:flex-start;">
+                <div style="font-size:1.6rem;flex-shrink:0;">📊</div>
+                <div>
+                  <div style="font-weight:700;font-size:0.92rem;margin-bottom:4px;">Data Science Certification</div>
+                  <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:6px;">Coursera · Jun 2020 · ID: GMDGACZRVUBW</div>
+                  <p style="font-size:0.82rem;">Data analysis, machine learning fundamentals, and Python for data-driven decision-making.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Awards & Recognition -->
+          <div class="cv-section reveal" style="margin-top:40px;">
+            <div class="cv-section-title">Awards &amp; Recognition</div>
+
+            <div class="award-card">
+              <div class="award-icon">🏆</div>
+              <div>
+                <div style="font-weight:700;font-size:0.92rem;margin-bottom:4px;">Chairman's Award for All-Round Performance</div>
+                <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:6px;">Masters' Union · 2025</div>
+                <p style="font-size:0.85rem;color:var(--text-secondary);">Highest recognition awarded by the Chairman of Masters' Union for outstanding academic performance, leadership, and entrepreneurial contribution throughout the Executive MBA programme.</p>
+              </div>
+            </div>
+
+            <div class="award-card">
+              <div class="award-icon">📋</div>
+              <div>
+                <div style="font-weight:700;font-size:0.92rem;margin-bottom:4px;">Dean's List — Academic Excellence</div>
+                <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:6px;">Masters' Union · 2024–2025</div>
+                <p style="font-size:0.85rem;color:var(--text-secondary);">Recognised on the Dean's List for sustained academic excellence throughout the Executive MBA programme. GPA: 3.63 / 4.0.</p>
+              </div>
+            </div>
+
+            <div class="award-card">
+              <div class="award-icon">🚀</div>
+              <div>
+                <div style="font-weight:700;font-size:0.92rem;margin-bottom:4px;">VIP Demo Day Winner — Industrial AI Startup</div>
+                <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:6px;">Masters' Union · 2024</div>
+                <p style="font-size:0.85rem;color:var(--text-secondary);">Won the VIP Demo Day pitch competition with an Industrial AI startup strategy for predictive maintenance in Indian manufacturing — the founding concept that became Skorosys.ai.</p>
+              </div>
+            </div>
+
+            <div class="award-card">
+              <div class="award-icon">🥈</div>
+              <div>
+                <div style="font-weight:700;font-size:0.92rem;margin-bottom:4px;">2nd Place — National Level Technical Symposium</div>
+                <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:6px;">VIT-Vellore · 2015</div>
+                <p style="font-size:0.85rem;color:var(--text-secondary);">2nd place at VIT-Vellore National Level Technical Symposium for research on optimising CNC dry turning parameters using the Taguchi method. Also ranked in the Top 50 at the All India Project Symposium, IIT-Madras.</p>
+              </div>
+            </div>
+
+            <div class="award-card">
+              <div class="award-icon">⭐</div>
+              <div>
+                <div style="font-weight:700;font-size:0.92rem;margin-bottom:4px;">Best Achiever's Award</div>
+                <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:6px;">Acharya Institute of Technology · 2014</div>
+                <p style="font-size:0.85rem;color:var(--text-secondary);">Awarded for outstanding all-round academic and extracurricular performance across the engineering programme.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Publications & Articles -->
+          <div class="cv-section reveal" style="margin-top:40px;" id="publications">
+            <div class="cv-section-title">Publications &amp; Articles</div>
+
+            <div style="border-left:3px solid var(--accent-cyan);padding:20px 24px;background:var(--bg-card);border-radius:0 12px 12px 0;margin-bottom:16px;">
+              <div style="font-weight:700;font-size:0.95rem;margin-bottom:6px;">Lights, Hustle, Action: A Hands-On Lesson in Entrepreneurship</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:10px;">LinkedIn Article · Ujjwal Chebbi · December 17, 2024</div>
+              <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:12px;">Reflective article on building a dropshipping business while managing full-time employment — exploring the mindset, discipline, and lessons that bridge execution at work with entrepreneurial ambition. Informed the commercial strategy behind Skorosys.</p>
+              <div class="team-tags" style="justify-content:flex-start;">
+                <span class="tag">Entrepreneurship</span>
+                <span class="tag">Business Building</span>
+                <span class="tag">Execution</span>
+              </div>
+            </div>
+
+            <div style="border-left:3px solid var(--accent-cyan);padding:20px 24px;background:var(--bg-card);border-radius:0 12px 12px 0;margin-bottom:16px;">
+              <div style="font-weight:700;font-size:0.95rem;margin-bottom:6px;">Optimisation of Dry Turning Parameters of AISI 4140 Steel Using Taguchi Method</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:10px;">Final Year Research Project · Acharya Institute of Technology / Kennametal · 2015</div>
+              <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:12px;">Research on optimising cutting forces and surface roughness for CNC machining of hardened steel using Design of Experiments (Taguchi methodology). Presented at IIT-Madras All India Project Symposium (Top 50) and VIT-Vellore National Technical Symposium (2nd Place).</p>
+              <div class="team-tags" style="justify-content:flex-start;">
+                <span class="tag">CNC Machining</span>
+                <span class="tag">Taguchi Method</span>
+                <span class="tag">Manufacturing Research</span>
+                <span class="tag">Design of Experiments</span>
+              </div>
+            </div>
+
+            <div style="border-left:3px dashed var(--border);padding:20px 24px;background:rgba(255,255,255,0.02);border-radius:0 12px 12px 0;">
+              <div style="font-weight:700;font-size:0.92rem;margin-bottom:4px;color:var(--text-muted);">[ Add more publications / articles ]</div>
+              <p style="font-size:0.82rem;color:var(--text-muted);font-style:italic;">Add any blog posts, industry articles, white papers, or case studies here.</p>
+            </div>
+          </div>
+
+          <!-- Volunteer Work -->
+          <div class="cv-section reveal" style="margin-top:40px;">
+            <div class="cv-section-title">Volunteer &amp; Community</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+
+              <div class="card" style="padding:22px;">
+                <div style="font-size:1.4rem;margin-bottom:8px;">🌿</div>
+                <div style="font-weight:700;font-size:0.9rem;margin-bottom:4px;">Co-Founder, NatureWatch</div>
+                <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:8px;">Jun 2011 – Present</div>
+                <p style="font-size:0.82rem;color:var(--text-secondary);">Co-founded an environmental awareness initiative working on biodiversity monitoring and community-level environmental education campaigns across Karnataka.</p>
+              </div>
+
+              <div class="card" style="padding:22px;">
+                <div style="font-size:1.4rem;margin-bottom:8px;">🦁</div>
+                <div style="font-weight:700;font-size:0.9rem;margin-bottom:4px;">Volunteer, Lions Clubs International India</div>
+                <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:8px;">Jan 2009 – Present</div>
+                <p style="font-size:0.82rem;color:var(--text-secondary);">Long-standing volunteer with Lions Clubs India, contributing to poverty alleviation programs, health awareness campaigns, and community service initiatives.</p>
+              </div>
+
+              <div class="card" style="padding:22px;">
+                <div style="font-size:1.4rem;margin-bottom:8px;">🎓</div>
+                <div style="font-weight:700;font-size:0.9rem;margin-bottom:4px;">Core Coordinator — Cultural Programs</div>
+                <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:8px;">Acharya Institute of Technology · 2011–2015</div>
+                <p style="font-size:0.82rem;color:var(--text-secondary);">Coordinated large-scale cultural and technical events for the institute, managing cross-functional teams and driving student engagement.</p>
+              </div>
+
+              <div class="card" style="padding:22px;">
+                <div style="font-size:1.4rem;margin-bottom:8px;">⚖️</div>
+                <div style="font-weight:700;font-size:0.9rem;margin-bottom:4px;">Harvard Case Competition Participant</div>
+                <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:8px;">Masters' Union · 2024–2025</div>
+                <p style="font-size:0.82rem;color:var(--text-secondary);">Participated in Harvard-style case competition analysing the Ferrari-Pirelli strategic merger — developing M&amp;A evaluation, synergy analysis, and stakeholder strategy.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- CV Upload -->
+          <div class="cv-section reveal" style="margin-top:40px;">
+            <div class="cv-section-title">CV Document</div>
+            <div class="upload-zone" onclick="document.getElementById('cv-upload-2').click()">
+              <div style="font-size:2.5rem;margin-bottom:12px;">📄</div>
+              <div style="font-weight:700;margin-bottom:6px;">Upload your CV PDF</div>
+              <p style="font-size:0.85rem;margin-bottom:16px;">Click to select a PDF — it will be available for visitors to download</p>
+              <span class="btn btn-outline" style="pointer-events:none;font-size:0.85rem;">Choose PDF File</span>
+              <input type="file" id="cv-upload-2" accept=".pdf" style="display:none;" onchange="handleCvUpload(this)" />
+            </div>
+            <div id="cv-uploaded-msg" style="display:none;margin-top:16px;padding:16px 20px;background:rgba(76,175,114,0.1);border:1px solid rgba(76,175,114,0.3);border-radius:10px;color:var(--accent-green);font-weight:600;font-size:0.88rem;">
+              ✓ CV uploaded — download link is now live on this page.
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="card reveal" style="margin-top:48px;padding:32px;text-align:center;background:linear-gradient(135deg,rgba(62,207,203,0.07),rgba(76,175,114,0.07));border-color:rgba(62,207,203,0.2);">
+            <h3 style="margin-bottom:8px;">Interested in working together?</h3>
+            <p style="margin-bottom:24px;font-size:0.9rem;">Whether you're a potential customer, investor, or industry partner — Ujjwal would love to connect.</p>
+            <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+              <a href="mailto:ujjwal@skorosys.com" class="btn btn-primary">Send an Email</a>
+              <a href="https://www.linkedin.com/in/ujjwal-chebbi-a4845b94/" target="_blank" rel="noopener" class="btn btn-outline">Connect on LinkedIn</a>
+              <a href="index.html#contact" class="btn btn-outline">Book a Demo</a>
+            </div>
+          </div>
+
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom:12px;">
+            <svg viewBox="0 0 36 36" fill="none" width="32" height="32">
+              <path d="M18 5 A13 13 0 0 1 31 18" stroke="#3ecfcb" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+              <path d="M18 31 A13 13 0 0 1 5 18"  stroke="#4caf72" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+              <circle cx="18" cy="5"  r="2" fill="#3ecfcb"/>
+              <circle cx="18" cy="31" r="2" fill="#4caf72"/>
+            </svg>
+            <span class="nav-logo-text">Skoro<span>sys</span>.ai</span>
+          </a>
+          <p>Solving manufacturing problems through AI.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Products</h5>
+          <a href="products.html#skoro-sense">SkoroSense</a>
+          <a href="products.html#skoro-board">SkoroBoard</a>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="about.html">About</a>
+          <a href="about.html#team">Team</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <a href="mailto:ujjwal@skorosys.com">ujjwal@skorosys.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Skorosys Technologies Pvt. Ltd.</span>
+        <span>Made in India 🇮🇳</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function handleCvUpload(input) {
+      if (!input.files || !input.files[0]) return;
+      const file = input.files[0];
+      const url  = URL.createObjectURL(file);
+      document.getElementById('cv-label').textContent = '✓ CV Uploaded';
+      const dl = document.getElementById('cv-download');
+      dl.href = url;
+      dl.download = 'Ujjwal-Chebbi-CV.pdf';
+      dl.style.display = 'flex';
+      const msg = document.getElementById('cv-uploaded-msg');
+      if (msg) msg.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
