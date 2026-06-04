@@ -108,6 +108,17 @@ p  { color: var(--text-secondary); font-size: 1rem; }
   color: var(--accent-cyan);
   transform: translateY(-2px);
 }
+.btn-login {
+  background: transparent;
+  color: var(--accent-cyan);
+  border: 1.5px solid var(--accent-cyan);
+}
+.btn-login:hover {
+  background: var(--accent-cyan);
+  color: var(--bg-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(62,207,203,0.35);
+}
 .btn-green {
   background: var(--accent-green);
   color: #fff;
