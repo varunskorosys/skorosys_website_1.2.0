@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#0f3347"/>
+
+  <!-- Main thick arc: outer clockwise from s to e, then inner counterclockwise back -->
+  <path fill="white" d="
+    M 78.26 181.14
+    A 84 84 0 1 1 92.68 16.32
+    L 95.12 44.21
+    A 56 56 0 1 0 85.51 154.09
+    Z
+  "/>
+
+  <!-- Top-right arrowhead notch -->
+  <polygon fill="white" points="92.5,14.3 126.4,1.5 143.0,25.5"/>
+
+  <!-- Bottom-left inward arrowhead -->
+  <polygon fill="white" points="86.0,152.2 103.3,137.9 73.0,146.8"/>
+</svg>
