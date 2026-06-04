@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Varun Chebbi — Profile & CV | Skorosys.ai</title>
-  <meta name="description" content="Varun Chebbi — Co-Founder & CTO of Skorosys.ai. Industrial AI researcher, IIoT engineer, and digital twin specialist with experience at Rockwell Automation, Bosch Rexroth, and TVARIT." />
+  <title>Varun Uday Chebbi — Profile & CV | Skorosys.ai</title>
+  <meta name="description" content="Varun Uday Chebbi — Co-Founder & CTO of Skorosys.ai. Product & Industrial Digitalization professional specialising in IIoT, AI-driven predictive maintenance, digital twins, and edge computing." />
   <link rel="stylesheet" href="css/styles.css" />
   <style>
     .timeline { position: relative; padding-left: 28px; }
@@ -27,22 +27,20 @@
       box-shadow: 0 0 8px rgba(62,207,203,0.5);
     }
     .timeline-item:last-child::before { background: var(--accent-green); box-shadow: 0 0 8px rgba(76,175,114,0.5); }
-    .patent-card {
-      border-left: 3px solid var(--accent-cyan);
-      padding: 20px 24px;
-      background: var(--bg-card);
-      border-radius: 0 12px 12px 0;
-      margin-bottom: 16px;
-    }
-    .upload-zone {
-      border: 2px dashed var(--border);
+    .cert-img {
+      width: 100%;
       border-radius: 12px;
-      padding: 32px;
-      text-align: center;
-      cursor: pointer;
-      transition: border-color 0.2s, background 0.2s;
+      border: 1px solid var(--border-card);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .upload-zone:hover { border-color: var(--accent-cyan); background: rgba(62,207,203,0.04); }
+    .cert-img:hover { transform: scale(1.02); box-shadow: 0 16px 48px rgba(0,0,0,0.5); }
+    .ref-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-card);
+      border-radius: 12px;
+      padding: 20px 24px;
+    }
   </style>
 </head>
 <body>
@@ -73,17 +71,13 @@
     </div>
   </nav>
 
-  <!-- PAGE HEADER -->
   <div style="height:var(--nav-height);"></div>
   <div style="background:linear-gradient(180deg,var(--bg-secondary) 0%,var(--bg-primary) 100%);padding:40px 0 0;border-bottom:1px solid var(--border-card);">
     <div class="container">
-      <a href="about.html" style="color:var(--text-muted);font-size:0.85rem;display:inline-flex;align-items:center;gap:6px;margin-bottom:32px;transition:color 0.2s;" onmouseover="this.style.color='var(--accent-cyan)'" onmouseout="this.style.color='var(--text-muted)'">
-        ← About
-      </a>
+      <a href="about.html" style="color:var(--text-muted);font-size:0.85rem;display:inline-flex;align-items:center;gap:6px;margin-bottom:32px;transition:color 0.2s;" onmouseover="this.style.color='var(--accent-cyan)'" onmouseout="this.style.color='var(--text-muted)'">← About</a>
     </div>
   </div>
 
-  <!-- PROFILE CONTENT -->
   <section class="section--sm" style="padding-top:48px;">
     <div class="container">
       <div class="profile-layout">
@@ -92,68 +86,69 @@
         <aside class="profile-sidebar">
           <div class="card" style="padding:32px;text-align:center;">
             <div class="team-photo" style="width:160px;height:160px;margin:0 auto 20px;font-size:4rem;">
-              <img src="images/varun-chebbi.jpg" alt="Varun Chebbi" onerror="this.style.display='none';this.parentElement.innerHTML='👤';" />
+              <img src="images/varun-chebbi.jpg" alt="Varun Uday Chebbi" onerror="this.style.display='none';this.parentElement.innerHTML='👤';" />
             </div>
-            <div class="name">Varun Chebbi</div>
+            <div class="name">Varun Uday Chebbi</div>
             <div class="title">Co-Founder &amp; CTO, Skorosys.ai</div>
 
             <div class="profile-contact" style="margin-top:20px;text-align:left;">
-              <a href="mailto:varun@skorosys.com">
-                <span class="icon">✉</span> varun@skorosys.com
-              </a>
-              <a href="mailto:vuchebbi2309@gmail.com">
-                <span class="icon">✉</span> vuchebbi2309@gmail.com
-              </a>
-              <a href="https://www.linkedin.com/in/varun-chebbi-065686192/" target="_blank" rel="noopener">
-                <span class="icon">in</span> linkedin.com/in/varun-chebbi
-              </a>
-              <a href="https://skorosys.com" target="_blank">
-                <span class="icon">🌐</span> skorosys.com
-              </a>
-              <a href="#">
-                <span class="icon">📍</span> India
-              </a>
+              <a href="tel:+4917648981740"><span class="icon">📞</span> +49 176 489 81740</a>
+              <a href="mailto:varunudaychebbi@gmail.com"><span class="icon">✉</span> varunudaychebbi@gmail.com</a>
+              <a href="mailto:varun@skorosys.com"><span class="icon">✉</span> varun@skorosys.com</a>
+              <a href="https://www.linkedin.com/in/varun-chebbi-065686192/" target="_blank" rel="noopener"><span class="icon">in</span> linkedin.com/in/varun-chebbi</a>
+              <a href="#"><span class="icon">📍</span> Stralsund, Germany</a>
             </div>
 
             <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border-card);">
-              <!-- CV Upload / Download -->
               <a href="images/varun-chebbi-cv.pdf" download="Varun-Chebbi-CV.pdf" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:10px;font-size:0.85rem;">
                 ⬇ Download CV (PDF)
               </a>
-              <a href="https://www.linkedin.com/in/varun-chebbi-065686192/" target="_blank" rel="noopener" class="btn btn-outline" style="width:100%;justify-content:center;font-size:0.85rem;margin-top:10px;">
+              <a href="https://www.linkedin.com/in/varun-chebbi-065686192/" target="_blank" rel="noopener" class="btn btn-outline" style="width:100%;justify-content:center;font-size:0.85rem;">
                 View LinkedIn Profile
               </a>
             </div>
           </div>
 
-          <!-- Skills -->
+          <!-- Expertise -->
           <div class="card" style="padding:28px;margin-top:24px;">
-            <div class="cv-section-title">Core Skills</div>
+            <div class="cv-section-title">Expertise</div>
             <div style="display:flex;flex-direction:column;gap:14px;">
               <div class="skill-item">
-                <div class="skill-label"><span>Industrial AI / ML</span><span style="color:var(--accent-cyan);">95%</span></div>
+                <div class="skill-label"><span>Product Strategy</span><span style="color:var(--accent-cyan);">95%</span></div>
                 <div class="skill-bar"><div class="skill-fill" data-width="95%"></div></div>
               </div>
               <div class="skill-item">
-                <div class="skill-label"><span>IIoT &amp; Edge Computing</span><span style="color:var(--accent-cyan);">92%</span></div>
-                <div class="skill-bar"><div class="skill-fill" data-width="92%"></div></div>
+                <div class="skill-label"><span>IIoT Product Development</span><span style="color:var(--accent-cyan);">93%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="93%"></div></div>
               </div>
               <div class="skill-item">
-                <div class="skill-label"><span>Digital Twin Design</span><span style="color:var(--accent-cyan);">90%</span></div>
+                <div class="skill-label"><span>Digital Twins &amp; Edge AI</span><span style="color:var(--accent-cyan);">90%</span></div>
                 <div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div>
               </div>
               <div class="skill-item">
-                <div class="skill-label"><span>OT-IT Integration</span><span style="color:var(--accent-cyan);">88%</span></div>
+                <div class="skill-label"><span>Go-to-Market Strategy</span><span style="color:var(--accent-cyan);">88%</span></div>
                 <div class="skill-bar"><div class="skill-fill" data-width="88%"></div></div>
               </div>
               <div class="skill-item">
-                <div class="skill-label"><span>CFD / Simulation</span><span style="color:var(--accent-cyan);">82%</span></div>
-                <div class="skill-bar"><div class="skill-fill" data-width="82%"></div></div>
+                <div class="skill-label"><span>Stakeholder Management</span><span style="color:var(--accent-cyan);">88%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="88%"></div></div>
               </div>
               <div class="skill-item">
-                <div class="skill-label"><span>Cloud Robotics / DevOps</span><span style="color:var(--accent-cyan);">78%</span></div>
-                <div class="skill-bar"><div class="skill-fill" data-width="78%"></div></div>
+                <div class="skill-label"><span>Leadership</span><span style="color:var(--accent-cyan);">85%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div>
               </div>
+            </div>
+          </div>
+
+          <!-- Languages -->
+          <div class="card" style="padding:28px;margin-top:24px;">
+            <div class="cv-section-title">Languages</div>
+            <div style="display:flex;flex-direction:column;gap:10px;font-size:0.88rem;">
+              <div style="display:flex;justify-content:space-between;"><span>English</span><span style="color:var(--accent-cyan);font-weight:600;">Fluent</span></div>
+              <div style="display:flex;justify-content:space-between;"><span>German</span><span style="color:var(--accent-cyan);font-weight:600;">Professional</span></div>
+              <div style="display:flex;justify-content:space-between;"><span>Hindi</span><span style="color:var(--accent-cyan);font-weight:600;">Native</span></div>
+              <div style="display:flex;justify-content:space-between;"><span>Kannada</span><span style="color:var(--accent-cyan);font-weight:600;">Native</span></div>
+              <div style="display:flex;justify-content:space-between;"><span>Marathi</span><span style="color:var(--accent-cyan);font-weight:600;">Conversational</span></div>
             </div>
           </div>
 
@@ -161,21 +156,18 @@
           <div class="card" style="padding:28px;margin-top:24px;">
             <div class="cv-section-title">Technologies</div>
             <div class="team-tags" style="justify-content:flex-start;">
-              <span class="tag">Python</span>
-              <span class="tag">TensorFlow / PyTorch</span>
-              <span class="tag">OpenFOAM</span>
-              <span class="tag">PLC / SCADA</span>
-              <span class="tag">OPC-UA</span>
-              <span class="tag">MQTT</span>
-              <span class="tag">Docker / Kubernetes</span>
-              <span class="tag">AWS IoT</span>
-              <span class="tag">IBM Power / Cloud</span>
-              <span class="tag">MES / ERP Integration</span>
-              <span class="tag">Bosch ctrlX</span>
-              <span class="tag">Rockwell FactoryTalk</span>
+              <span class="tag">CODESYS / PLC</span>
+              <span class="tag">WAGO CC100</span>
+              <span class="tag">Portainer</span>
+              <span class="tag">OPC-UA / MQTT</span>
               <span class="tag">Edge AI</span>
-              <span class="tag">Predictive Maintenance</span>
-              <span class="tag">Condition Monitoring</span>
+              <span class="tag">Digital Twins</span>
+              <span class="tag">MES / ERP</span>
+              <span class="tag">Cloud Analytics</span>
+              <span class="tag">Python / ML</span>
+              <span class="tag">Docker / K8s</span>
+              <span class="tag">Agile / Scrum</span>
+              <span class="tag">Vibration Analytics</span>
             </div>
           </div>
         </aside>
@@ -187,7 +179,7 @@
           <div class="card cv-section reveal" style="padding:32px;margin-bottom:32px;">
             <div class="cv-section-title">About</div>
             <p style="font-size:0.97rem;line-height:1.85;color:var(--text-secondary);">
-              Varun Chebbi is the Co-Founder &amp; CTO of Skorosys.ai — an Industrial AI company building plug-and-play predictive maintenance solutions for India's process manufacturing sector. A mechanical engineer by training, Varun has spent his career at the intersection of physical systems and intelligent software: from running computational fluid dynamics simulations on IBM Power 9 supercomputers to deploying industrial digital twins at Rockwell Automation, building AI enablement pipelines at TVARIT GmbH, researching cloud robotics at Bosch Rexroth, and developing IIoT applications at Portainer.io. He brings rare end-to-end expertise — from sensor firmware and edge AI to cloud ML orchestration and SaaS product engineering — directly into Skorosys's technology stack.
+              Product and Industrial Digitalization professional with experience in Industrial IoT, AI-driven predictive maintenance, digital twins, and edge computing. Skilled at translating customer needs into scalable product solutions by bridging engineering, commercial strategy, and stakeholder collaboration. Experienced in working across startups, industrial technology companies, and research environments to drive innovation and business growth. Co-Founder &amp; CTO of Skorosys.ai — building the next generation of plug-and-play predictive maintenance for India's process manufacturing industry.
             </p>
           </div>
 
@@ -203,13 +195,9 @@
                     <div class="cv-item-period">2025 – Present</div>
                   </div>
                   <div class="cv-item-org">Skorosys Technologies Pvt. Ltd. · India</div>
-                  <p style="font-size:0.88rem;margin-bottom:12px;">Leading all technology at Skorosys — hardware (SkoroSense edge AI vibration sensor), embedded firmware, cloud ML orchestration, and the SkoroBoard SaaS dashboard. Architecting the end-to-end predictive maintenance stack for Indian process manufacturing: chemical, petrochemical, pharmaceutical, and food &amp; beverage. Driving pilot deployments with IFFCO and IndianOil.</p>
+                  <p style="font-size:0.88rem;margin-bottom:12px;">Leading all technology at Skorosys — hardware (SkoroSense edge AI vibration sensor), embedded firmware, cloud ML orchestration, and SkoroBoard SaaS dashboard. Architecting end-to-end predictive maintenance for Indian process manufacturing. Driving pilot deployments with IFFCO and IndianOil.</p>
                   <div class="team-tags" style="justify-content:flex-start;">
-                    <span class="tag">Edge AI</span>
-                    <span class="tag">ML Orchestration</span>
-                    <span class="tag">Embedded Systems</span>
-                    <span class="tag">SaaS Architecture</span>
-                    <span class="tag">Predictive Maintenance</span>
+                    <span class="tag">Edge AI Sensor</span><span class="tag">ML Orchestration</span><span class="tag">SaaS</span><span class="tag">Predictive Maintenance</span>
                   </div>
                 </div>
               </div>
@@ -217,33 +205,18 @@
               <div class="timeline-item">
                 <div class="card" style="padding:24px;">
                   <div class="cv-item-header">
-                    <div class="cv-item-title">IIoT Software Application Engineer</div>
-                    <div class="cv-item-period">Feb 2024 – Present</div>
+                    <div class="cv-item-title">Research Project Staff</div>
+                    <div class="cv-item-period">2024 – Present</div>
                   </div>
-                  <div class="cv-item-org">Portainer.io · Remote</div>
-                  <p style="font-size:0.88rem;margin-bottom:12px;">Developing industrial IIoT software applications on the Portainer container management platform. Working on edge computing deployments and containerised workloads for industrial environments, enabling seamless OT-IT integration and remote device management at scale.</p>
-                  <div class="team-tags" style="justify-content:flex-start;">
-                    <span class="tag">Docker</span>
-                    <span class="tag">Kubernetes</span>
-                    <span class="tag">Edge Computing</span>
-                    <span class="tag">IIoT Applications</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="timeline-item">
-                <div class="card" style="padding:24px;">
-                  <div class="cv-item-header">
-                    <div class="cv-item-title">Intern — Cloud Robotics</div>
-                    <div class="cv-item-period">Aug 2023 – Feb 2024</div>
-                  </div>
-                  <div class="cv-item-org">Bosch Rexroth · Germany / Remote</div>
-                  <p style="font-size:0.88rem;margin-bottom:12px;">Researched and developed cloud robotics solutions at one of the world's leading industrial automation companies. Worked on integrating robotic systems with cloud infrastructure, enabling remote monitoring, AI-driven control, and real-time data streaming from industrial robots to centralised platforms.</p>
-                  <div class="team-tags" style="justify-content:flex-start;">
-                    <span class="tag">Cloud Robotics</span>
-                    <span class="tag">Bosch ctrlX</span>
-                    <span class="tag">ROS</span>
-                    <span class="tag">Industrial IoT</span>
+                  <div class="cv-item-org">Hochschule Stralsund — Control Systems Laboratory · Stralsund, Germany</div>
+                  <ul style="margin-top:8px;display:flex;flex-direction:column;gap:7px;">
+                    <li class="product-feature"><span class="check">→</span><span style="font-size:0.87rem;color:var(--text-secondary);">Executed end-to-end product strategy for Industrial AI ecosystem solutions (Energy Optimisation, Predictive Maintenance, Edge AI, and Digital Twin) across HVAC and semiconductor manufacturing verticals.</span></li>
+                    <li class="product-feature"><span class="check">→</span><span style="font-size:0.87rem;color:var(--text-secondary);">Launched ML-powered diagnostic products integrating high-frequency sensor signals and machine logs, achieving <strong style="color:var(--accent-cyan);">20%+ improvement in precision</strong>.</span></li>
+                    <li class="product-feature"><span class="check">→</span><span style="font-size:0.87rem;color:var(--text-secondary);">Drove cross-functional alignment and roadmap execution — delivered <strong style="color:var(--accent-cyan);">100% of research milestones on schedule</strong>, managing a team of 4 via Agile practices.</span></li>
+                    <li class="product-feature"><span class="check">→</span><span style="font-size:0.87rem;color:var(--text-secondary);">Defined and validated business cases for new AI-powered product additions.</span></li>
+                  </ul>
+                  <div class="team-tags" style="justify-content:flex-start;margin-top:12px;">
+                    <span class="tag">Industrial AI</span><span class="tag">Edge AI</span><span class="tag">Digital Twin</span><span class="tag">Agile</span><span class="tag">Product Strategy</span>
                   </div>
                 </div>
               </div>
@@ -251,17 +224,18 @@
               <div class="timeline-item">
                 <div class="card" style="padding:24px;">
                   <div class="cv-item-header">
-                    <div class="cv-item-title">Working Student — AI Enablement Engineer</div>
-                    <div class="cv-item-period">Aug 2022 – Jul 2023</div>
+                    <div class="cv-item-title">IIoT Application Contractor</div>
+                    <div class="cv-item-period">2024 – 2025</div>
                   </div>
-                  <div class="cv-item-org">TVARIT GmbH · Frankfurt, Germany</div>
-                  <p style="font-size:0.88rem;margin-bottom:12px;">TVARIT is an Industrial AI company specialising in predictive quality and maintenance for manufacturing. Built and maintained OT-IT data acquisition pipelines — extracting time-series data from PLC, MES, and ERP systems into cloud data lakes. Collaborated directly with the data science team on model training infrastructure, feature engineering, and anomaly detection pipelines for shop-floor equipment.</p>
-                  <div class="team-tags" style="justify-content:flex-start;">
-                    <span class="tag">PLC Data Acquisition</span>
-                    <span class="tag">MES / ERP Integration</span>
-                    <span class="tag">OT-IT Bridge</span>
-                    <span class="tag">ML Pipelines</span>
-                    <span class="tag">Anomaly Detection</span>
+                  <div class="cv-item-org">Portainer · Remote / Europe</div>
+                  <ul style="margin-top:8px;display:flex;flex-direction:column;gap:7px;">
+                    <li class="product-feature"><span class="check">→</span><span style="font-size:0.87rem;color:var(--text-secondary);">Owned commercial and technical product delivery for Industrial IoT ecosystem engagements across EU manufacturing and energy clients — defined go-to-market positioning, managed PoC and pilot budgets up to <strong style="color:var(--accent-cyan);">€250K</strong>.</span></li>
+                    <li class="product-feature"><span class="check">→</span><span style="font-size:0.87rem;color:var(--text-secondary);">Architected and productized CODESYS-based virtual PLC solutions on <strong style="color:var(--accent-cyan);">WAGO CC100 controllers</strong> using centralised fleet management software Portainer.</span></li>
+                    <li class="product-feature"><span class="check">→</span><span style="font-size:0.87rem;color:var(--text-secondary);">Acted as the technical bridge between business stakeholders and engineering teams.</span></li>
+                    <li class="product-feature"><span class="check">→</span><span style="font-size:0.87rem;color:var(--text-secondary);">Advised clients on edge orchestration and high-availability strategies, improving efficiency by <strong style="color:var(--accent-cyan);">20%</strong>.</span></li>
+                  </ul>
+                  <div class="team-tags" style="justify-content:flex-start;margin-top:12px;">
+                    <span class="tag">CODESYS</span><span class="tag">WAGO CC100</span><span class="tag">Edge Orchestration</span><span class="tag">Go-to-Market</span><span class="tag">PoC Management</span>
                   </div>
                 </div>
               </div>
@@ -269,17 +243,18 @@
               <div class="timeline-item">
                 <div class="card" style="padding:24px;">
                   <div class="cv-item-header">
-                    <div class="cv-item-title">IoT Solution Specialist / IoT Engineer</div>
-                    <div class="cv-item-period">Prior to 2022</div>
+                    <div class="cv-item-title">IOT Solution Specialist</div>
+                    <div class="cv-item-period">2020 – 2022</div>
                   </div>
-                  <div class="cv-item-org">Knowledge Lens — A Rockwell Automation Company · India</div>
-                  <p style="font-size:0.88rem;margin-bottom:12px;">Knowledge Lens is a data science and AI services company acquired by Rockwell Automation. Worked on industrial asset analytics and digital twin development for manufacturing clients. Designed and deployed IoT sensor networks for condition monitoring, built real-time data visualisation dashboards, and developed ML models for predictive maintenance of rotating equipment — directly foundational to what became Skorosys.</p>
-                  <div class="team-tags" style="justify-content:flex-start;">
-                    <span class="tag">Digital Twins</span>
-                    <span class="tag">Asset Analytics</span>
-                    <span class="tag">Condition Monitoring</span>
-                    <span class="tag">Rockwell FactoryTalk</span>
-                    <span class="tag">IoT Sensor Networks</span>
+                  <div class="cv-item-org">Rockwell Automation India (Knowledge Lens) · India</div>
+                  <ul style="margin-top:8px;display:flex;flex-direction:column;gap:7px;">
+                    <li class="product-feature"><span class="check">→</span><span style="font-size:0.87rem;color:var(--text-secondary);">Drove ecosystem product growth for Industrial IoT and Digital Twin solutions.</span></li>
+                    <li class="product-feature"><span class="check">→</span><span style="font-size:0.87rem;color:var(--text-secondary);">Built and launched end-to-end IoT ecosystem bundles integrating sensors, PLCs, edge AI, MES/ERP, and cloud analytics platforms — positioning as a one-stop offering for industrial customers.</span></li>
+                    <li class="product-feature"><span class="check">→</span><span style="font-size:0.87rem;color:var(--text-secondary);">Defined business cases and validated ROI for AI-powered diagnostic products leveraging time-series analytics on vibration and sensor data, achieving <strong style="color:var(--accent-cyan);">20%+ improvement</strong>.</span></li>
+                    <li class="product-feature"><span class="check">→</span><span style="font-size:0.87rem;color:var(--text-secondary);">Managed large-scale ecosystem rollouts across <strong style="color:var(--accent-cyan);">200+ solar power plants</strong>.</span></li>
+                  </ul>
+                  <div class="team-tags" style="justify-content:flex-start;margin-top:12px;">
+                    <span class="tag">Digital Twins</span><span class="tag">IIoT Bundles</span><span class="tag">Vibration Analytics</span><span class="tag">Cloud Analytics</span><span class="tag">Solar IoT</span>
                   </div>
                 </div>
               </div>
@@ -295,11 +270,22 @@
               <div class="timeline-item">
                 <div class="card" style="padding:24px;">
                   <div class="cv-item-header">
-                    <div class="cv-item-title">PhD — Industrial AI</div>
-                    <div class="cv-item-period">[ Add years ]</div>
+                    <div class="cv-item-title">Master of Arts — International Innovation Management</div>
+                    <div class="cv-item-period">2025 – Present</div>
                   </div>
-                  <div class="cv-item-org">[ University — Add institution name ]</div>
-                  <p style="font-size:0.88rem;color:var(--text-secondary);">Research focus: AI-driven predictive maintenance, machine learning for rotating equipment fault detection, and edge inference architectures for industrial environments. Thesis explored the application of deep learning models on vibration sensor data for early fault detection in process manufacturing assets.</p>
+                  <div class="cv-item-org">Hochschule Stralsund · Stralsund, Germany</div>
+                  <p style="font-size:0.88rem;color:var(--text-secondary);margin-top:6px;">Focus on international innovation strategy, product management, and technology commercialisation. Bridging engineering expertise with business leadership to drive industrial innovation at scale.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="card" style="padding:24px;">
+                  <div class="cv-item-header">
+                    <div class="cv-item-title">Master of Engineering — System Design and Simulation</div>
+                    <div class="cv-item-period">2022 – 2025</div>
+                  </div>
+                  <div class="cv-item-org">Hochschule Stralsund · Stralsund, Germany</div>
+                  <p style="font-size:0.88rem;color:var(--text-secondary);margin-top:6px;">Specialisation in control systems, simulation, and industrial system design. Research in edge AI architectures and condition monitoring systems for manufacturing equipment.</p>
                 </div>
               </div>
 
@@ -307,115 +293,106 @@
                 <div class="card" style="padding:24px;">
                   <div class="cv-item-header">
                     <div class="cv-item-title">Bachelor of Engineering — Mechanical Engineering</div>
-                    <div class="cv-item-period">[ Add years ]</div>
+                    <div class="cv-item-period">2016 – 2020</div>
                   </div>
-                  <div class="cv-item-org">[ University — Add institution name ] · India</div>
-                  <p style="font-size:0.88rem;color:var(--text-secondary);">Specialisation in computational mechanics and fluid dynamics. Conducted research on CFD simulations using OpenFOAM on IBM Power 9 high-performance computing platforms, exploring digital twin design and real-time simulation for industrial applications.</p>
+                  <div class="cv-item-org">New Horizon College of Engineering · Bengaluru, India</div>
+                  <p style="font-size:0.88rem;color:var(--text-secondary);margin-top:6px;">First Class. Participated in CanSat/CubeSat projects, near space satellite launches, international research collaborations with teams across Serbia, Israel, Russia, Italy, Portugal, Japan, Canada, Peru, and Tunisia. Awarded <strong style="color:var(--accent-cyan);">Best Outgoing Student</strong> for contributions to research, hackathons, innovations, and patents.</p>
+                  <div class="team-tags" style="justify-content:flex-start;margin-top:12px;">
+                    <span class="tag">Best Outgoing Student</span><span class="tag">CanSat / CubeSat</span><span class="tag">International Research</span><span class="tag">Satellite Design</span>
+                  </div>
                 </div>
               </div>
 
             </div>
           </div>
 
-          <!-- Research & Publications -->
-          <div class="cv-section reveal" style="margin-top:40px;" id="publications">
-            <div class="cv-section-title">Research &amp; Publications</div>
+          <!-- Awards & Achievements -->
+          <div class="cv-section reveal" style="margin-top:40px;" id="achievements">
+            <div class="cv-section-title">Awards &amp; Achievements</div>
 
-            <div class="pub-item card" style="margin-bottom:16px;padding:24px;border-left:3px solid var(--accent-cyan);">
-              <div class="pub-title">OpenFOAM Computations on IBM Power 9 Platforms</div>
-              <div class="pub-meta" style="margin-bottom:10px;">LinkedIn Article · Varun Chebbi · 2022–2023</div>
-              <p style="font-size:0.85rem;margin-bottom:12px;color:var(--text-secondary);">Technical article documenting CFD simulations of pipe intersection fluid flow on IBM Power 9 infrastructure using OpenFOAM. Demonstrates cloud-based computer-aided engineering (CAE) workflows for aerospace, automotive, and energy sectors, with applications to digital twin creation for industrial equipment.</p>
-              <div class="pub-tags">
-                <span class="tag">CFD</span>
-                <span class="tag">OpenFOAM</span>
-                <span class="tag">IBM Power 9</span>
-                <span class="tag">Digital Twin</span>
-                <span class="tag">Cloud CAE</span>
+            <!-- Best Outgoing Student Certificate -->
+            <div class="card" style="padding:28px;margin-bottom:24px;border-left:3px solid var(--accent-cyan);">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;">
+                <div>
+                  <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+                    <span style="font-size:1.8rem;">🏆</span>
+                    <div>
+                      <div style="font-weight:700;font-size:1rem;">Best Outgoing Student</div>
+                      <div style="font-size:0.78rem;color:var(--accent-cyan);font-weight:600;">New Horizon College of Engineering · AY 2016–2020</div>
+                    </div>
+                  </div>
+                  <p style="font-size:0.86rem;color:var(--text-secondary);line-height:1.7;">Awarded Certificate of Appreciation by New Horizon College of Engineering (Autonomous, Affiliated to VTU, NAAC A Grade) in recognition of outstanding participation in:</p>
+                  <ul style="margin-top:10px;display:flex;flex-direction:column;gap:6px;">
+                    <li class="product-feature"><span class="check">✓</span><span style="font-size:0.84rem;color:var(--text-secondary);">Research, Hackathons, Innovations &amp; Patents</span></li>
+                    <li class="product-feature"><span class="check">✓</span><span style="font-size:0.84rem;color:var(--text-secondary);">Fabrication &amp; International Seminars / Competitions</span></li>
+                    <li class="product-feature"><span class="check">✓</span><span style="font-size:0.84rem;color:var(--text-secondary);">CanSat / CubeSat Projects &amp; Near Space Satellite Launches</span></li>
+                    <li class="product-feature"><span class="check">✓</span><span style="font-size:0.84rem;color:var(--text-secondary);">Satellite Design, Development &amp; Launching</span></li>
+                    <li class="product-feature"><span class="check">✓</span><span style="font-size:0.84rem;color:var(--text-secondary);">Collaborative Research with Serbia, Israel, Russia, Italy, Portugal, Japan, Canada, Peru, Tunisia</span></li>
+                  </ul>
+                  <div style="margin-top:14px;padding:10px 14px;background:rgba(62,207,203,0.08);border:1px solid rgba(62,207,203,0.2);border-radius:8px;font-size:0.78rem;color:var(--accent-cyan);font-weight:600;">
+                    Dept: Mechanical Engineering · Signed by Dean (R&amp;D) &amp; Principal
+                  </div>
+                </div>
+                <div>
+                  <img src="images/best-outgoing-student-cert.jpg" alt="Best Outgoing Student Certificate — Varun Chebbi" class="cert-img" onerror="this.parentElement.innerHTML='<div style=\'padding:32px;text-align:center;background:var(--bg-secondary);border-radius:12px;border:1px dashed var(--border);\'><div style=\'font-size:2rem;margin-bottom:8px;\'>📜</div><div style=\'font-size:0.82rem;color:var(--text-muted);\'>Certificate image<br/>coming soon</div></div>';" />
+                </div>
               </div>
             </div>
 
-            <div class="pub-item card" style="margin-bottom:16px;padding:24px;border-left:3px solid var(--accent-cyan);">
-              <div class="pub-title">[ Research Paper / Thesis — Add Title ]</div>
-              <div class="pub-meta" style="margin-bottom:10px;">[ Journal / Conference ] · [ Year ]</div>
-              <p style="font-size:0.85rem;margin-bottom:12px;font-style:italic;color:var(--text-muted);">Placeholder — add your PhD thesis chapter, journal paper, or conference paper details here.</p>
-              <div class="pub-tags">
-                <span class="tag">Industrial AI</span>
-                <span class="tag">Predictive Maintenance</span>
-                <span class="tag">[ Add Tags ]</span>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Patents -->
-          <div class="cv-section reveal" style="margin-top:40px;" id="patents">
-            <div class="cv-section-title">Patents</div>
-
-            <div class="patent-card">
-              <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px;flex-wrap:wrap;gap:8px;">
-                <div style="font-weight:700;font-size:0.95rem;">[ Patent Title — Add details ]</div>
-                <span style="font-size:0.72rem;background:rgba(62,207,203,0.1);color:var(--accent-cyan);padding:3px 10px;border-radius:6px;font-weight:600;white-space:nowrap;">[ Status: Pending / Granted ]</span>
-              </div>
-              <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:10px;">Application No: [ Add number ] · Filed: [ Add year ] · [ Patent Office ]</div>
-              <p style="font-size:0.85rem;color:var(--text-secondary);font-style:italic;">Placeholder — add your patent title, application number, filing date, and abstract. If you have filed or been granted patents for SkoroSense sensor design or ML algorithms, add them here.</p>
-            </div>
-
-            <div style="padding:20px 24px;background:rgba(62,207,203,0.04);border:1px dashed var(--border);border-radius:10px;font-size:0.85rem;color:var(--text-muted);text-align:center;">
-              Patents pending for SkoroSense edge AI sensor architecture and vibration-based fault detection methodology. Details to be published upon grant.
-            </div>
-          </div>
-
-          <!-- Key Projects -->
-          <div class="cv-section reveal" style="margin-top:40px;">
-            <div class="cv-section-title">Key Projects</div>
+            <!-- 20%+ Improvement Achievement -->
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-
               <div class="card" style="padding:22px;">
-                <div style="font-size:1.4rem;margin-bottom:10px;">🔌</div>
-                <div style="font-weight:700;margin-bottom:6px;">SkoroSense — Edge AI Sensor</div>
-                <p style="font-size:0.82rem;">Designed and engineered the SkoroSense vibration sensor with on-device ML inference. IP67-rated, wireless, 10-minute clamp-mount installation. Runs anomaly detection models at the edge before streaming to cloud.</p>
+                <div style="font-size:1.4rem;margin-bottom:8px;">📈</div>
+                <div style="font-weight:700;margin-bottom:6px;">20%+ Diagnostic Precision</div>
+                <p style="font-size:0.82rem;color:var(--text-secondary);">Achieved 20%+ improvement in ML-powered diagnostic product precision by integrating high-frequency sensor signals with machine logs at Hochschule Stralsund Control Systems Lab.</p>
               </div>
-
               <div class="card" style="padding:22px;">
-                <div style="font-size:1.4rem;margin-bottom:10px;">📊</div>
-                <div style="font-weight:700;margin-bottom:6px;">SkoroBoard — PdM Dashboard</div>
-                <p style="font-size:0.82rem;">Built the SkoroBoard web application for real-time asset health monitoring. Integrates ML failure predictions, digital twin views, and maintenance scheduling. Deployed for IFFCO and IndianOil pilot sites.</p>
+                <div style="font-size:1.4rem;margin-bottom:8px;">✅</div>
+                <div style="font-weight:700;margin-bottom:6px;">100% Research Milestone Delivery</div>
+                <p style="font-size:0.82rem;color:var(--text-secondary);">Delivered 100% of research milestones on schedule, managing a cross-functional team of 4 researchers using Agile practices at Hochschule Stralsund.</p>
               </div>
-
               <div class="card" style="padding:22px;">
-                <div style="font-size:1.4rem;margin-bottom:10px;">🤖</div>
-                <div style="font-weight:700;margin-bottom:6px;">Cloud Robotics Platform (Bosch Rexroth)</div>
-                <p style="font-size:0.82rem;">Developed cloud-connected robotics infrastructure enabling remote AI control and real-time monitoring of industrial robots from centralised cloud dashboards.</p>
+                <div style="font-size:1.4rem;margin-bottom:8px;">💶</div>
+                <div style="font-weight:700;margin-bottom:6px;">€250K PoC Portfolio (Portainer)</div>
+                <p style="font-size:0.82rem;color:var(--text-secondary);">Managed PoC and pilot budgets up to €250K for Industrial IoT ecosystem engagements across EU manufacturing and energy clients.</p>
               </div>
-
               <div class="card" style="padding:22px;">
-                <div style="font-size:1.4rem;margin-bottom:10px;">🏭</div>
-                <div style="font-weight:700;margin-bottom:6px;">OT-IT Data Pipeline (TVARIT)</div>
-                <p style="font-size:0.82rem;">Built end-to-end data pipelines extracting real-time time-series data from PLCs, MES, and ERP systems into cloud data lakes. Enabled ML model training for predictive quality and maintenance at automotive manufacturing plants.</p>
+                <div style="font-size:1.4rem;margin-bottom:8px;">☀️</div>
+                <div style="font-weight:700;margin-bottom:6px;">200+ Solar Plant Rollouts</div>
+                <p style="font-size:0.82rem;color:var(--text-secondary);">Led large-scale IoT ecosystem rollouts across 200+ solar power plants at Rockwell Automation India, integrating sensors, PLCs, MES/ERP, and cloud analytics.</p>
               </div>
-
-              <div class="card" style="padding:22px;">
-                <div style="font-size:1.4rem;margin-bottom:10px;">🧬</div>
-                <div style="font-weight:700;margin-bottom:6px;">Industrial Digital Twins (Knowledge Lens)</div>
-                <p style="font-size:0.82rem;">Designed digital twin models for industrial rotating equipment (pumps, motors, compressors) — virtual representations synchronised with real sensor data for life prediction and maintenance planning.</p>
-              </div>
-
-              <div class="card" style="padding:22px;">
-                <div style="font-size:1.4rem;margin-bottom:10px;">💨</div>
-                <div style="font-weight:700;margin-bottom:6px;">CFD on IBM Power 9 (Research)</div>
-                <p style="font-size:0.82rem;">Ran high-fidelity CFD simulations using OpenFOAM on IBM Power 9 HPC clusters. Explored cloud-based CAE workflows for industrial digital twin creation across aerospace and energy domains.</p>
-              </div>
-
             </div>
           </div>
 
+          <!-- References -->
+          <div class="cv-section reveal" style="margin-top:40px;">
+            <div class="cv-section-title">References</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+              <div class="ref-card">
+                <div style="font-weight:700;font-size:1rem;margin-bottom:4px;">Jan Christian Kuhr</div>
+                <div style="font-size:0.82rem;color:var(--accent-cyan);font-weight:600;margin-bottom:12px;">Project Supervisor &amp; Professor · Hochschule Stralsund</div>
+                <div class="profile-contact" style="margin-top:0;">
+                  <a href="tel:+491626950315" style="border:none;padding:4px 0;"><span class="icon">📞</span> +49 162 695 0315</a>
+                  <a href="mailto:Jan-Christian.Kuhr@hochschule-stralsund.de" style="border:none;padding:4px 0;"><span class="icon">✉</span> Jan-Christian.Kuhr@hochschule-stralsund.de</a>
+                </div>
+              </div>
+              <div class="ref-card">
+                <div style="font-weight:700;font-size:1rem;margin-bottom:4px;">Tobias Muehlnikel</div>
+                <div style="font-size:0.82rem;color:var(--accent-cyan);font-weight:600;margin-bottom:12px;">Head of Industrial &amp; IoT · Portainer</div>
+                <div class="profile-contact" style="margin-top:0;">
+                  <a href="tel:+491728471867" style="border:none;padding:4px 0;"><span class="icon">📞</span> +49 172 847 1867</a>
+                  <a href="mailto:tobias.muehlnikel@portainer.io" style="border:none;padding:4px 0;"><span class="icon">✉</span> tobias.muehlnikel@portainer.io</a>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <!-- CTA -->
           <div class="card reveal" style="margin-top:48px;padding:32px;text-align:center;background:linear-gradient(135deg,rgba(62,207,203,0.07),rgba(76,175,114,0.07));border-color:rgba(62,207,203,0.2);">
             <h3 style="margin-bottom:8px;">Want to collaborate or learn more?</h3>
             <p style="margin-bottom:24px;font-size:0.9rem;">Whether you're a potential customer, investor, research collaborator, or just curious about industrial AI — reach out.</p>
             <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-              <a href="mailto:varun@skorosys.com" class="btn btn-primary">Send an Email</a>
+              <a href="mailto:varunudaychebbi@gmail.com" class="btn btn-primary">Send an Email</a>
               <a href="https://www.linkedin.com/in/varun-chebbi-065686192/" target="_blank" rel="noopener" class="btn btn-outline">Connect on LinkedIn</a>
               <a href="index.html#contact" class="btn btn-outline">Book a Demo</a>
             </div>
@@ -454,7 +431,7 @@
         </div>
         <div class="footer-col">
           <h5>Contact</h5>
-          <a href="mailto:varun@skorosys.com">varun@skorosys.com</a>
+          <a href="mailto:varunudaychebbi@gmail.com">varunudaychebbi@gmail.com</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -465,25 +442,5 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script>
-    function handleCvUpload(input) {
-      if (!input.files || !input.files[0]) return;
-      const file = input.files[0];
-      const url  = URL.createObjectURL(file);
-
-      // Update label
-      document.getElementById('cv-label').textContent = '✓ CV Uploaded';
-
-      // Show download link
-      const dl = document.getElementById('cv-download');
-      dl.href = url;
-      dl.download = 'Varun-Chebbi-CV.pdf';
-      dl.style.display = 'flex';
-
-      // Show success message
-      const msg = document.getElementById('cv-uploaded-msg');
-      if (msg) msg.style.display = 'block';
-    }
-  </script>
 </body>
 </html>
